@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'OMKAR KATHI',
   author: 'Omkar Kathi',
-  headerTitle: 'BLOGS',
+  headerTitle: 'VID',
   description: 'A blog to spread business Awareness',
   language: 'en-us',
   theme: 'system', // system, dark or light
