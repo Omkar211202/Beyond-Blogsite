@@ -1,7 +1,7 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
   title: 'Beyond.',
-  author: 'Omkar Kathi',
+  author: 'OMKAR KATHI',
   headerTitle: '<Beyond>',
   description: 'Blogs on Business & Finance',
   language: 'en-us',
