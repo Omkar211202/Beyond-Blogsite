@@ -6,7 +6,7 @@ import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
 import Image from 'next/image'
-import logo from 'data/logo.jpg'
+import logo from 'data/logo.png'
 
 const Header = () => {
   let headerClass = 'flex items-center w-full bg-white dark:bg-gray-950 justify-between py-10'
@@ -17,9 +17,9 @@ const Header = () => {
   return (
     <header className={headerClass}>
       <Link href="/" aria-label={siteMetadata.headerTitle}>
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-center justify-between">
           <div className="mr-3">
-            {/* <Image src={logo} alt="logo" height={100} width={100} /> */}
+            <Image src={logo} alt="logo" height={100} width={100} className="rounded-full border-green-500 border-2" />
           </div>
           {typeof siteMetadata.headerTitle === 'string' ? (
             <div className="hidden h-6 text-4xl font-semibold sm:block">
