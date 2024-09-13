@@ -5,7 +5,7 @@ const siteMetadata = {
   headerTitle: 'BEYOND.',
   description: 'Blogs on Business & Finance',
   language: 'en-us',
-  theme: 'system', // system, dark or light
+  theme: 'dark', // system, dark or light
   siteUrl: 'https://beyond-nine.vercel.app/',
   siteRepo: 'https://github.com/Omkar211202/Beyond',
   siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
