@@ -1,6 +1,5 @@
 import siteMetadata from '@/data/siteMetadata'
 import headerNavLinks from '@/data/headerNavLinks'
-import Logo from '@/data/logo.svg'
 import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
@@ -24,7 +23,7 @@ const Header = () => {
               alt="logo"
               height={100}
               width={100}
-              className="rounded-full border-2 border-green-500 bg-white"
+              className="rounded-full border-8 border-green-500 bg-white"
             />
           </div>
           {typeof siteMetadata.headerTitle === 'string' ? (
