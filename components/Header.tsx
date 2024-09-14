@@ -24,7 +24,7 @@ const Header = () => {
               alt="logo"
               height={100}
               width={100}
-              className="rounded-full border-2 border-green-500"
+              className="rounded-full border-2 border-green-500 bg-white"
             />
           </div>
           {typeof siteMetadata.headerTitle === 'string' ? (
