@@ -76,14 +76,12 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
                         <dd className="text-gray-900 dark:text-gray-100">{author.name}</dd>
                         <dt className="sr-only">Twitter</dt>
                         <dd>
-                          {author.twitter && (
+                          {author.linkedin && (
                             <Link
-                              href={author.twitter}
+                              href={author.linkedin}
                               className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
                             >
-                              {author.twitter
-                                .replace('https://twitter.com/', '@')
-                                .replace('https://x.com/', '@')}
+                              Linkedin
                             </Link>
                           )}
                         </dd>
@@ -97,17 +95,17 @@ export default function PostLayout({ content, authorDetails, next, prev, childre
               <div className="prose max-w-none pb-8 pt-10 dark:prose-invert">{children}</div>
               <div className="pb-6 pt-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(path)} rel="nofollow">
-                  {/* Discuss on Twitter */}
+                  Discuss on Twitter
                 </Link>
-                {/* {` • `} */}
-                {/* <Link href={editUrl(filePath)}>View on GitHub</Link> */}
+                {` • `}
+                <Link href={editUrl(filePath)}>View on GitHub</Link>
               </div>
               {siteMetadata.comments && (
                 <div
                   className="pb-6 pt-6 text-center text-gray-700 dark:text-gray-300"
                   id="comment"
                 >
-                  {/* <Comments slug={slug} /> */}
+                  <Comments slug={slug} />
                 </div>
               )}
             </div>
