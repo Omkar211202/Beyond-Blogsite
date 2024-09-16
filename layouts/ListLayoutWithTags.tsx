@@ -121,7 +121,7 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags, images } = post
                 return (
