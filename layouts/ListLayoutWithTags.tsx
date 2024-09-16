@@ -121,13 +121,20 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul>
+            <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags, images } = post
                 return (
-                  <li key={path} className="py-5">
+                  <li key={path} className="rounded-lg border-2 border-green-500 p-2">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>
+                        <Image
+                          src={`${images}`}
+                          alt={path}
+                          width={200}
+                          height={100}
+                          className="h-48 w-96 rounded-lg p-1"
+                        />
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                           <time dateTime={date} suppressHydrationWarning>
@@ -137,8 +144,11 @@ export default function ListLayoutWithTags({
                       </dl>
                       <div className="space-y-3">
                         <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                          <h2 className="h-24 text-2xl font-bold leading-8 tracking-tight">
+                            <Link
+                              href={`/${path}`}
+                              className="text-xl text-gray-900 dark:text-gray-100 lg:text-2xl"
+                            >
                               {title}
                             </Link>
                           </h2>
@@ -146,7 +156,7 @@ export default function ListLayoutWithTags({
                             {tags?.map((tag) => <Tag key={tag} text={tag} />)}
                           </div>
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        <div className="prose max-w-none text-sm text-gray-500 dark:text-gray-400">
                           {summary}
                         </div>
                       </div>
