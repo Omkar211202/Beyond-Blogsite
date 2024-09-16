@@ -20,14 +20,15 @@ export default function Home({ posts }) {
             {siteMetadata.description}
           </p>
         </div>
-        <ul className="mb-32 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
+        <div className="mb-32 grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
           {!posts.length && 'No posts found.'}
           {posts.slice(0, MAX_DISPLAY).map((post) => {
             const { slug, date, title, summary, tags, images } = post
             return (
-              <li
+              <a
                 key={slug}
                 className="grid place-content-center rounded-lg border-4 border-green-500"
+                href={`/blog/${slug}`}
               >
                 <article>
                   <div className="max-w-96 rounded-lg">
@@ -79,10 +80,10 @@ export default function Home({ posts }) {
                     </div>
                   </div>
                 </article>
-              </li>
+              </a>
             )
           })}
-        </ul>
+        </div>
       </div>
       {posts.length > MAX_DISPLAY && (
         <div className="flex justify-end text-base font-medium leading-6">
