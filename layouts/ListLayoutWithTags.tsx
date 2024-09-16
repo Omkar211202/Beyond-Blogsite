@@ -121,12 +121,12 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
               {displayPosts.map((post) => {
                 const { path, date, title, summary, tags, images } = post
                 return (
-                  <li key={path} className="rounded-lg border-2 border-green-500 p-2">
-                    <article className="flex flex-col space-y-2 xl:space-y-0">
+                  <a key={path} className="rounded-lg border-2 border-green-500 p-2" href={path}>
+                    <div className="flex flex-col space-y-2 xl:space-y-0">
                       <dl>
                         <Image
                           src={`${images}`}
@@ -160,11 +160,11 @@ export default function ListLayoutWithTags({
                           {summary}
                         </div>
                       </div>
-                    </article>
-                  </li>
+                    </div>
+                  </a>
                 )
               })}
-            </ul>
+            </div>
             {pagination && pagination.totalPages > 1 && (
               <Pagination currentPage={pagination.currentPage} totalPages={pagination.totalPages} />
             )}
