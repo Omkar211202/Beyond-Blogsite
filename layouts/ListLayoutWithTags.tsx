@@ -73,7 +73,6 @@ export default function ListLayoutWithTags({
   const tagCounts = tagData as Record<string, number>
   const tagKeys = Object.keys(tagCounts)
   const sortedTags = tagKeys.sort((a, b) => tagCounts[b] - tagCounts[a])
-
   const displayPosts = initialDisplayPosts.length > 0 ? initialDisplayPosts : posts
   return (
     <>
@@ -84,7 +83,6 @@ export default function ListLayoutWithTags({
           </h1>
         </div>
         <div className="flex sm:space-x-24">
-
           <div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
               {displayPosts.map((post) => {

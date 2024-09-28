@@ -31,7 +31,7 @@ export default function Home({ posts }) {
                 href={`/blog/${slug}`}
               >
                 <article>
-                  <div className="max-w-96 rounded-lg">
+                  <div className="w-fit max-w-96 rounded-lg">
                     <dl>
                       <Image
                         src={`${images}`}
@@ -41,15 +41,15 @@ export default function Home({ posts }) {
                         className="h-60 w-96 rounded-lg p-1"
                       />
                       <dt className="sr-only">Published on</dt>
-                      <dd className="mt-5 p-2 text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                      <dd className="mt-5 px-2 text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
                       </dd>
                     </dl>
-                    <div className="p-2">
-                      <div className="space-y-5 xl:col-span-3">
+                    <div className="">
+                      <div className="xl:col-span-3">
                         <div className="space-y-6">
                           <div>
-                            <h2 className="text-2xl font-bold leading-8 tracking-tight">
+                            <h2 className="px-2 text-2xl font-bold leading-8 tracking-tight">
                               <Link
                                 href={`/blog/${slug}`}
                                 className="underline-bg-green-500 text-gray-900 hover:underline-offset-1 dark:text-gray-100 "
@@ -57,18 +57,18 @@ export default function Home({ posts }) {
                                 {title}
                               </Link>
                             </h2>
-                            <div className="flex flex-wrap">
+                            <div className="flex flex-wrap px-2">
                               {tags.map((tag) => (
                                 <Tag key={tag} text={tag} />
                               ))}
                             </div>
                           </div>
-                          <div className="prose h-40 max-w-none text-gray-500 dark:text-gray-400">
+                          <div className="prose h-40 max-w-none px-2 text-gray-500 dark:text-gray-400">
                             {summary}
                           </div>
                         </div>
                       </div>
-                      <div className="text-base font-medium leading-6">
+                      <div className="p-2 text-base font-medium leading-6">
                         <Link
                           href={`/blog/${slug}`}
                           className="text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
