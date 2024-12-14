@@ -6,7 +6,7 @@ import NewsletterForm from 'pliny/ui/NewsletterForm'
 import logo from 'data/logo.png'
 import Image from 'next/image'
 
-const MAX_DISPLAY = 5
+const MAX_DISPLAY = 6
 
 export default function Home({ posts }) {
   return (
