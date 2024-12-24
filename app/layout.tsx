@@ -62,18 +62,30 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
   const GA_TRACKING_ID = 'G-8Z72MXWNZB'
+
   return (
     <html
       lang={siteMetadata.language}
       className={`${space_grotesk.variable} scroll-smooth`}
       suppressHydrationWarning
     >
-      <meta name="google-site-verification" content="_38yBmP9CBggXItniVSR9Y69cPGoU415bvyvR9vCc54" />
-      <meta name="msapplication-TileColor" content="#000000" />
-      <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-      <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
-      <meta name="robots" content="index, follow" />
-      <head>
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="_38yBmP9CBggXItniVSR9Y69cPGoU415bvyvR9vCc54"
+        />
+        <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
+        <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+        <meta name="robots" content="index, follow" />
+        <meta
+          name="description"
+          content="Finance, Tech, Business content is posted in this blog site"
+        />
+        <meta
+          name="keywords"
+          content="finance, technology, business, blogsite, self-made, beyond, learning, growth"
+        />
         <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -89,16 +101,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
         <link rel="icon" href={`${basePath}/static/favicons/logo.png`} />
-        <meta
-          name="description"
-          content="Finance, Tech, Business content is posted in this blog site"
-        />
-        <meta
-          name="keywords"
-          content="finance, technology, business, blogsite, self-made, beyond, learning, growth"
-        />
-      </head>
-      <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
+        <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
+      </Head>
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
           <SectionContainer>
