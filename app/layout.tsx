@@ -61,7 +61,6 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const basePath = process.env.BASE_PATH || ''
-  const GA_TRACKING_ID = 'G-8Z72MXWNZB'
 
   return (
     <html
@@ -85,22 +84,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta
           name="keywords"
           content="finance, technology, business, blogsite, self-made, beyond, learning, growth,life"
-        />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        ></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${GA_TRACKING_ID}', {
-              page_path: window.location.pathname,
-            });
-          `,
-          }}
         />
         <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
         <script>
