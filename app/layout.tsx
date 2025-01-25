@@ -84,7 +84,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <meta
           name="keywords"
-          content="finance, technology, business, blogsite, self-made, beyond, learning, growth"
+          content="finance, technology, business, blogsite, self-made, beyond, learning, growth,life"
         />
         <script
           async
