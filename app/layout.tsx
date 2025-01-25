@@ -85,6 +85,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           name="keywords"
           content="finance, technology, business, blogsite, self-made, beyond, learning, growth,life"
         />
+        <link rel="icon" href={`${basePath}/static/favicons/logo.png`} />
+        <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
         <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
         <script>
           {`
@@ -97,8 +99,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               ]);
             `}
         </script>
-        <link rel="icon" href={`${basePath}/static/favicons/logo.png`} />
-        <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       </Head>
       <body className="bg-white pl-[calc(100vw-100%)] text-black antialiased dark:bg-gray-950 dark:text-white">
         <ThemeProviders>
