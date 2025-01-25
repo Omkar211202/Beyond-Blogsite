@@ -102,6 +102,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           `,
           }}
         />
+        <script src="https://cdn.brevo.com/js/sdk-loader.js" async></script>
+        <script>
+          {`
+              window.Brevo = window.Brevo || [];
+              Brevo.push([
+                  "init",
+                  {
+                  client_key: "rg72st2an8w54jiojkpgetcx"
+                  }
+              ]);
+            `}
+        </script>
         <link rel="icon" href={`${basePath}/static/favicons/logo.png`} />
         <link rel="alternate" type="application/rss+xml" href={`${basePath}/feed.xml`} />
       </Head>
